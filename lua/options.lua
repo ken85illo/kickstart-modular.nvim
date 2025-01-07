@@ -20,7 +20,7 @@ vim.opt.showmode = false
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
 vim.schedule(function()
-  vim.opt.clipboard = 'unnamedplus'
+    vim.opt.clipboard = 'unnamedplus'
 end)
 
 -- Enable break indent
@@ -66,13 +66,11 @@ vim.opt.scrolloff = 10
 -- Set the number of line relative to the cursor
 vim.opt.relativenumber = true
 
--- Set clipboard seperate to the vim
-vim.opt.clipboard = ''
-
 -- Fix the format of text in nvim
 vim.opt.autoindent = true
+vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.wrap = false
 
+-- Show tabline of buffers
 vim.opt.showtabline = 2
