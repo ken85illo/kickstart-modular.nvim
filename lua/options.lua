@@ -62,3 +62,17 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- vim: ts=2 sts=2 sw=2 et
+
+-- Set the number of line relative to the cursor
+vim.opt.relativenumber = true
+
+-- Set clipboard seperate to the vim
+vim.opt.clipboard = ''
+
+-- Fix the format of text in nvim
+vim.opt.autoindent = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.wrap = false
+
+vim.opt.showtabline = 2

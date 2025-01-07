@@ -22,4 +22,11 @@ return {
       },
     },
   },
+  config = function()
+    require('neo-tree').config {
+      source_selector = {
+        statusline = false,
+      },
+    }
+  end,
 }

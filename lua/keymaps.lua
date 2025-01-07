@@ -46,3 +46,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- vim: ts=2 sts=2 sw=2 et
+
+-- Toggle neotree when ctrl + n is pressed
+vim.keymap.set('n', '<C-n>', '<cmd>Neotree toggle<CR>')
