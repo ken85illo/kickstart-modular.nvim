@@ -49,3 +49,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- Toggle neotree when ctrl + n is pressed
 vim.keymap.set('n', '<C-n>', '<cmd>Neotree toggle<CR>')
+
+-- FineCmdLine shortcut
+--vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', { noremap = true })

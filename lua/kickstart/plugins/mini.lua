@@ -23,10 +23,6 @@ return {
       local statusline = require 'mini.statusline'
       -- set use_icons to true if you have a Nerd Font
       statusline.setup { use_icons = vim.g.have_nerd_font }
-      require('mini.tabline').setup()
-
-      --Autocomment in mini
-      require('mini.comment').setup()
 
       -- You can configure sections in the statusline by overriding their
       -- default behavior. For example, here we set the section for
@@ -35,6 +31,15 @@ return {
       statusline.section_location = function()
         return '%2l:%-2v'
       end
+
+      -- Show tabline in mini
+      require('mini.tabline').setup()
+
+      --Autocomment in mini
+      require('mini.comment').setup()
+
+      -- Move block of codes with alt
+      require('mini.move').setup()
 
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
