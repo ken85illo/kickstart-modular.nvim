@@ -77,3 +77,6 @@ vim.opt.shiftwidth = 4
 
 -- Show tabline of buffers
 vim.opt.showtabline = 2
+
+-- Set term gui colors
+vim.opt.termguicolors = true
