@@ -19,7 +19,7 @@ return {
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
-      --  and try some other statusline plugin
+      -- --  and try some other statusline plugin
       local statusline = require 'mini.statusline'
       -- set use_icons to true if you have a Nerd Font
       statusline.setup { use_icons = vim.g.have_nerd_font }
@@ -31,7 +31,7 @@ return {
       statusline.section_location = function()
         return '%2l:%-2v'
       end
-
+      --
       -- Show tabline in mini
       -- require('mini.tabline').setup()
 
@@ -43,6 +43,10 @@ return {
 
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
+      local f = function(args)
+        vim.b[args.buf].ministatusline_disable = true
+      end
+      vim.api.nvim_create_autocmd('Filetype', { pattern = 'neo-tree', callback = f })
     end,
   },
 }

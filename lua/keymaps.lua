@@ -63,5 +63,5 @@ vim.keymap.set('n', '<C-n>', '<cmd>Neotree toggle<CR>')
 vim.opt.guicursor = 'n-v-i-c:block-Cursor'
 
 -- Change buffer shortcut
-vim.api.nvim_set_keymap('n', '<leader>n', ':bn<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>p', ':bp<CR>', { noremap = true })
+-- vim.api.nvim_set_keymap('n', '<leader>n', ':bn<CR>', { noremap = true })
+-- vim.api.nvim_set_keymap('n', '<leader>p', ':bp<CR>', { noremap = true })

@@ -22,4 +22,5 @@ return {
       },
     },
   },
+  config = function() end,
 }

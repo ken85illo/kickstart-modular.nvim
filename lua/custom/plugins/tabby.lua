@@ -21,6 +21,8 @@ return {
     vim.api.nvim_set_keymap('n', '<leader>tmn', ':+tabmove<CR>', { noremap = true })
   end,
   config = function()
-    require('tabby').setup {}
+    require('tabby').setup {
+      nerdfont = true,
+    }
   end,
 }
