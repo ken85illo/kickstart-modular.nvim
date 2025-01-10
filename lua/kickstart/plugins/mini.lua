@@ -33,7 +33,7 @@ return {
       end
 
       -- Show tabline in mini
-      require('mini.tabline').setup()
+      -- require('mini.tabline').setup()
 
       --Autocomment in mini
       require('mini.comment').setup()

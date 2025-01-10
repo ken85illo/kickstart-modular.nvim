@@ -17,11 +17,10 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- TIP: Disable arrow keys in normal mode
--- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
--- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
--- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
--- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
-
+vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
+vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
+vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
+vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
 --
@@ -30,6 +29,13 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+-- Navigate between tmux panes
+vim.keymap.set('n', '<C-h>', '<cmd>TmuxNavigateLeft<CR>')
+vim.keymap.set('n', '<C-j>', '<cmd>TmuxNavigateDown<CR>')
+vim.keymap.set('n', '<C-k>', '<cmd>TmuxNavigateUp<CR>')
+vim.keymap.set('n', '<C-l>', '<cmd>TmuxNavigateRight<CR>')
+vim.keymap.set('n', '<C-\\>', '<cmd>TmuxNavigatePrevious<CR>')
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -52,3 +58,10 @@ vim.keymap.set('n', '<C-n>', '<cmd>Neotree toggle<CR>')
 
 -- FineCmdLine shortcut
 --vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', { noremap = true })
+
+-- Change cursor to block
+vim.opt.guicursor = 'n-v-i-c:block-Cursor'
+
+-- Change buffer shortcut
+vim.api.nvim_set_keymap('n', '<leader>n', ':bn<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>p', ':bp<CR>', { noremap = true })
