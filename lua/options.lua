@@ -80,3 +80,6 @@ vim.opt.showtabline = 2
 
 -- Set term gui colors
 vim.opt.termguicolors = true
+
+-- Change cursor to block
+-- vim.opt.guicursor = 'n-v-i-c:block-Cursor'

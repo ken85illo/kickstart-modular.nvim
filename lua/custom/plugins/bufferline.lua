@@ -1,14 +1,8 @@
 return {
-  'nanozuki/tabby.nvim',
-  -- event = 'VimEnter', -- if you want lazy load, see below
+  'akinsho/bufferline.nvim',
+  version = '*',
   dependencies = 'nvim-tree/nvim-web-devicons',
-  init = function()
-    -- Show tabline of buffers
-    vim.opt.showtabline = 2
-
-    -- Save session
-    vim.opt.sessionoptions = 'curdir,folds,globals,help,tabpages,terminal,winsize'
-
+  config = function()
     -- Keyboard shortcuts
     vim.api.nvim_set_keymap('n', '<leader>ta', ':$tabnew<CR>', { noremap = true })
     vim.api.nvim_set_keymap('n', '<leader>tc', ':tabclose<CR>', { noremap = true })
@@ -19,10 +13,15 @@ return {
     vim.api.nvim_set_keymap('n', '<leader>tmp', ':-tabmove<CR>', { noremap = true })
     -- move current tab to next position
     vim.api.nvim_set_keymap('n', '<leader>tmn', ':+tabmove<CR>', { noremap = true })
-  end,
-  config = function()
-    require('tabby').setup {
-      nerdfont = true,
+
+    vim.opt.termguicolors = true
+    require('bufferline').setup {
+      options = {
+        highlight = { underline = true, sp = 'blue' }, -- Optional
+        mode = 'tabs',
+        diagnostics = 'nvim_lsp',
+        tab_size = 25,
+      },
     }
   end,
 }
