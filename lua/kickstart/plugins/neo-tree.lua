@@ -25,6 +25,7 @@ return {
     config = function()
         require('neo-tree').setup {
             use_libuv_file_watcher = true,
+            window = { width = 35 },
         }
     end,
 }
