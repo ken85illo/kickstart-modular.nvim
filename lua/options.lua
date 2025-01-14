@@ -74,6 +74,7 @@ vim.opt.autoindent = true
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
 
 -- Show tabline of buffers
 vim.opt.showtabline = 2
