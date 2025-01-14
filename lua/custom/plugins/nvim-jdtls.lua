@@ -1,5 +1,5 @@
 -- Java language server
 
 return {
-  'mfussenegger/nvim-jdtls',
+    'mfussenegger/nvim-jdtls',
 }
