@@ -37,6 +37,12 @@ vim.keymap.set('n', '<C-k>', '<cmd>TmuxNavigateUp<CR>')
 vim.keymap.set('n', '<C-l>', '<cmd>TmuxNavigateRight<CR>')
 vim.keymap.set('n', '<C-\\>', '<cmd>TmuxNavigatePrevious<CR>')
 
+-- Resize window using a shortcut
+vim.keymap.set('n', '<C-S-Down>', ':resize +2<CR>', { desc = 'Resize Horizontal Split Down' })
+vim.keymap.set('n', '<C-S-Up>', ':resize -2<CR>', { desc = 'Resize Horizontal Split Up' })
+vim.keymap.set('n', '<C-Left>', ':vertical resize -2<CR>', { desc = 'Resize Vertical Split Down' })
+vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', { desc = 'Resize Vertical Split Up' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -51,10 +57,23 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     end,
 })
 
--- vim: ts=2 sts=2 sw=2 et
-
 -- Toggle neotree when ctrl + n is pressed
 vim.keymap.set('n', '<C-n>', '<cmd>Neotree toggle<CR>')
+
+-- Visual --
+-- Stay in indent mode
+vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('v', '>', '>gv')
+
+-- Defined for visual multi
+local function visual_cursors_with_delay()
+    -- Execute the vm-visual-cursors command.
+    vim.cmd 'silent! execute "normal! \\<Plug>(VM-Visual-Cursors)"'
+    -- Introduce delay via VimScript's 'sleep' (set to 500 milliseconds here).
+    vim.cmd 'sleep 200m'
+    -- Press 'A' in normal mode after the delay.
+    vim.cmd 'silent! execute "normal! A"'
+end
 
 -- FineCmdLine shortcut
 --vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', { noremap = true })
@@ -62,3 +81,5 @@ vim.keymap.set('n', '<C-n>', '<cmd>Neotree toggle<CR>')
 -- Change buffer shortcut
 -- vim.api.nvim_set_keymap('n', '<leader>n', ':bn<CR>', { noremap = true })
 -- vim.api.nvim_set_keymap('n', '<leader>p', ':bp<CR>', { noremap = true })
+
+-- vim: ts=4 sts=4 sw=4 et

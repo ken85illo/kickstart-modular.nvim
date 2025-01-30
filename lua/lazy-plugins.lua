@@ -90,4 +90,4 @@ require('lazy').setup({
     },
 })
 
--- vim: ts=2 sts=2 sw=2 et
+-- vim: ts=4 sts=4 sw=4 et

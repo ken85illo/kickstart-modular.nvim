@@ -62,11 +62,10 @@ local config = {
 
         -- 💀
         '-jar',
-        jdtls_path .. 'plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar',
+        vim.fn.glob(jdtls_path .. 'plugins/org.eclipse.equinox.launcher_*.jar', true),
         -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                       ^^^^^^^^^^^^^^
         -- Must point to the                                                     Change this to
         -- eclipse.jdt.ls installation                                           the actual version
-
         -- 💀
         '-configuration',
         jdtls_path .. 'config_linux/',

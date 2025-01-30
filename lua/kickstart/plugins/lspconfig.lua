@@ -244,8 +244,14 @@ return {
 
             require('lspconfig').lua_ls.setup {}
             require('lspconfig').bashls.setup {}
-            require('lspconfig').clangd.setup {}
+            require('lspconfig').clangd.setup {
+                cmd = {
+                    'clangd',
+                    '--fallback-style=webkit',
+                },
+            }
+            require('lspconfig').cmake.setup {}
         end,
     },
 }
--- vim: ts=2 sts=2 sw=2 et
+-- vim: ts=4 sts=4 sw=4 et

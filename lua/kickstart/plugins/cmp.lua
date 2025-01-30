@@ -33,14 +33,39 @@ return {
             --  nvim-cmp does not ship with all sources by default. They are split
             --  into multiple repos for maintenance purposes.
             'hrsh7th/cmp-nvim-lsp',
-            'hrsh7th/cmp-path',
             'hrsh7th/cmp-nvim-lsp-signature-help',
+            'hrsh7th/cmp-buffer',
+            'hrsh7th/cmp-cmdline',
+            'hrsh7th/cmp-path',
         },
         config = function()
             -- See `:help cmp`
             local cmp = require 'cmp'
             local luasnip = require 'luasnip'
             luasnip.config.setup {}
+
+            -- `/` cmdline setup.
+            cmp.setup.cmdline('/', {
+                mapping = cmp.mapping.preset.cmdline(),
+                sources = {
+                    { name = 'buffer' },
+                },
+            })
+
+            -- `:` cmdline setup.
+            cmp.setup.cmdline(':', {
+                mapping = cmp.mapping.preset.cmdline(),
+                sources = cmp.config.sources({
+                    { name = 'path' },
+                }, {
+                    {
+                        name = 'cmdline',
+                        option = {
+                            ignore_cmds = { 'Man', '!' },
+                        },
+                    },
+                }),
+            })
 
             cmp.setup {
                 snippet = {
@@ -112,9 +137,10 @@ return {
                     { name = 'nvim_lsp_signature_help' },
                     { name = 'luasnip' },
                     { name = 'path' },
+                    { name = 'buffer' },
                 },
             }
         end,
     },
 }
--- vim: ts=2 sts=2 sw=2 et
+-- vim: ts=4 sts=4 sw=4 et
