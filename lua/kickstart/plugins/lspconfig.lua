@@ -16,9 +16,6 @@ return {
     {
         -- Main LSP Configuration
         'neovim/nvim-lspconfig',
-        opts = {
-            inlay_hint = { enabled = true },
-        },
         dependencies = {
             -- Automatically install LSPs and related tools to stdpath for Neovim
             -- Mason must be loaded before its dependents so we need to set it up here.
@@ -255,12 +252,7 @@ return {
 
             require('lspconfig').lua_ls.setup {}
             require('lspconfig').bashls.setup {}
-            require('lspconfig').clangd.setup {
-                cmd = {
-                    'clangd',
-                    '--fallback-style=webkit',
-                },
-            }
+            require('lspconfig').clangd.setup {}
             require('lspconfig').cmake.setup {}
         end,
     },

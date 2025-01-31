@@ -6,8 +6,8 @@ return {
             -- Snippet Engine & its associated nvim-cmp source
             {
                 'L3MON4D3/LuaSnip',
+                -- Build Step is needed for regex support in snippets.
                 build = (function()
-                    -- Build Step is needed for regex support in snippets.
                     -- This step is not supported in many windows environments.
                     -- Remove the below condition to re-enable on windows.
                     if vim.fn.has 'win32' == 1 or vim.fn.executable 'make' == 0 then
@@ -43,29 +43,6 @@ return {
             local cmp = require 'cmp'
             local luasnip = require 'luasnip'
             luasnip.config.setup {}
-
-            -- `/` cmdline setup.
-            cmp.setup.cmdline('/', {
-                mapping = cmp.mapping.preset.cmdline(),
-                sources = {
-                    { name = 'buffer' },
-                },
-            })
-
-            -- `:` cmdline setup.
-            cmp.setup.cmdline(':', {
-                mapping = cmp.mapping.preset.cmdline(),
-                sources = cmp.config.sources({
-                    { name = 'path' },
-                }, {
-                    {
-                        name = 'cmdline',
-                        option = {
-                            ignore_cmds = { 'Man', '!' },
-                        },
-                    },
-                }),
-            })
 
             cmp.setup {
                 snippet = {
@@ -140,6 +117,29 @@ return {
                     { name = 'buffer' },
                 },
             }
+
+            -- `/` cmdline setup.
+            cmp.setup.cmdline('/', {
+                mapping = cmp.mapping.preset.cmdline(),
+                sources = {
+                    { name = 'buffer' },
+                },
+            })
+
+            -- `:` cmdline setup.
+            cmp.setup.cmdline(':', {
+                mapping = cmp.mapping.preset.cmdline(),
+                sources = cmp.config.sources({
+                    { name = 'path' },
+                }, {
+                    {
+                        name = 'cmdline',
+                        option = {
+                            ignore_cmds = { 'Man', '!' },
+                        },
+                    },
+                }),
+            })
         end,
     },
 }

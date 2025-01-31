@@ -61,16 +61,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- Toggle neotree when ctrl + n is pressed
 vim.keymap.set('n', '<C-n>', '<cmd>Neotree toggle<CR>')
 
--- Visual --
--- Stay in indent mode
-vim.keymap.set('v', '<', '<gv')
-vim.keymap.set('v', '>', '>gv')
+-- Toggle terminal using ToggleTerm
+vim.keymap.set('n', '<leader>tx', "<cmd>ToggleTerm direction='horizontal' size=10<CR>", { desc = 'Toggle terminal (horizontal)' })
+vim.keymap.set('n', '<leader>tv', "<cmd>ToggleTerm direction='vertical' size=80<CR>", { desc = 'Toggle terminal (vertical)' })
+vim.keymap.set('n', '<leader>tt', "<cmd>ToggleTerm direction='tab'<CR>", { desc = 'Toggle terminal (tab)' })
+vim.keymap.set('n', '<leader>tf', "<cmd>ToggleTerm direction='float'<CR>", { desc = 'Toggle terminal (float)' })
 
--- FineCmdLine shortcut
---vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', { noremap = true })
-
--- Change buffer shortcut
--- vim.api.nvim_set_keymap('n', '<leader>n', ':bn<CR>', { noremap = true })
--- vim.api.nvim_set_keymap('n', '<leader>p', ':bp<CR>', { noremap = true })
+-- Copy current path
+vim.keymap.set('n', '<leader>y', "<cmd>let @+=expand('%:p')<CR>", { desc = 'Copy current path' })
 
 -- vim: ts=4 sts=4 sw=4 et
