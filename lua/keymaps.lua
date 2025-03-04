@@ -62,10 +62,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.keymap.set('n', '<C-n>', '<cmd>Neotree toggle<CR>')
 
 -- Toggle terminal using ToggleTerm
-vim.keymap.set('n', '<leader>tx', "<cmd>ToggleTerm direction='horizontal' size=10<CR>", { desc = 'Toggle terminal (horizontal)' })
-vim.keymap.set('n', '<leader>tv', "<cmd>ToggleTerm direction='vertical' size=80<CR>", { desc = 'Toggle terminal (vertical)' })
-vim.keymap.set('n', '<leader>tt', "<cmd>ToggleTerm direction='tab'<CR>", { desc = 'Toggle terminal (tab)' })
-vim.keymap.set('n', '<leader>tf', "<cmd>ToggleTerm direction='float'<CR>", { desc = 'Toggle terminal (float)' })
+vim.keymap.set('n', '<leader>tt', "<cmd>ToggleTerm direction='horizontal' size=10<CR>", { desc = 'Toggle terminal (horizontal)' })
 
 -- Copy current path
 vim.keymap.set('n', '<leader>y', "<cmd>let @+=expand('%:p')<CR>", { desc = 'Copy current path' })
