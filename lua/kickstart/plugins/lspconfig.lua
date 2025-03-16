@@ -234,6 +234,8 @@ return {
                 'java-debug-adapter',
                 'java-test',
                 'jdtls',
+                'pyright',
+                'debugpy',
                 'lua-language-server',
                 'codelldb',
             })
@@ -256,6 +258,7 @@ return {
             require('lspconfig').bashls.setup {}
             require('lspconfig').clangd.setup {}
             require('lspconfig').cmake.setup {}
+            require('lspconfig').pyright.setup {}
         end,
     },
 }
