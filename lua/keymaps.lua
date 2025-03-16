@@ -63,6 +63,9 @@ vim.keymap.set('n', '<C-n>', '<cmd>Neotree toggle<CR>')
 
 -- Toggle terminal using ToggleTerm
 vim.keymap.set('n', '<leader>tt', "<cmd>ToggleTerm direction='horizontal' size=10<CR>", { desc = 'Toggle terminal (horizontal)' })
+vim.keymap.set('n', '<leader>ty', "<cmd>ToggleTerm direction='vertical' size=60<CR>", { desc = 'Toggle terminal (vertical)' })
+vim.keymap.set('n', '<leader>tu', "<cmd>ToggleTerm direction='tab' <CR>", { desc = 'Toggle terminal (tab)' })
+vim.keymap.set('n', '<leader>ti', "<cmd>ToggleTerm direction='float' <CR>", { desc = 'Toggle terminal (float)' })
 
 -- Copy current path
 vim.keymap.set('n', '<leader>y', "<cmd>let @+=expand('%:p')<CR>", { desc = 'Copy current path' })
