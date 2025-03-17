@@ -228,11 +228,13 @@ return {
 
                 -- python
                 'isort',
+                'black',
                 'pyright',
                 'debugpy',
 
                 -- javascript
                 'prettierd',
+                'prettier',
 
                 -- C/C++
                 'clang-format',
