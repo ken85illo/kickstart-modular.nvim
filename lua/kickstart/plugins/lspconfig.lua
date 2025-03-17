@@ -222,22 +222,35 @@ return {
             -- for you, so that they are available from within Neovim.
             local ensure_installed = vim.tbl_keys(servers or {})
             vim.list_extend(ensure_installed, {
+                -- Lua
+                'lua-language-server',
                 'stylua', -- Used to format Lua code
-                'isort', -- python
-                'prettierd', -- javascript
-                'clang-format', -- C/C++
-                'bash-language-server',
+
+                -- python
+                'isort',
+                'pyright',
+                'debugpy',
+
+                -- javascript
+                'prettierd',
+
+                -- C/C++
+                'clang-format',
                 'clangd',
+                'codelldb',
+
+                -- Cmake
                 'cmake-language-server',
                 'cmakelang',
                 'cmakelint',
+
+                -- Bash
+                'bash-language-server',
+
+                -- Java
                 'java-debug-adapter',
                 'java-test',
                 'jdtls',
-                'pyright',
-                'debugpy',
-                'lua-language-server',
-                'codelldb',
             })
             require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

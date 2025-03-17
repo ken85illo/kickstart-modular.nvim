@@ -29,6 +29,9 @@ return {
                     delay = 200,
                     reveal = { 'close' },
                 },
+                indicator = {
+                    style = 'none',
+                },
                 offsets = {
                     {
                         filetype = 'neo-tree',
@@ -50,6 +53,18 @@ return {
                     fg = '#000000',
                     bg = '#000000',
                     sp = '#000000',
+                },
+                separator_selected = {
+                    fg = '#000000',
+                    bg = '#000000',
+                },
+                separator_visible = {
+                    fg = '#000000',
+                    bg = '#000000',
+                },
+                separator = {
+                    fg = '#000000',
+                    bg = '#000000',
                 },
             },
         }
