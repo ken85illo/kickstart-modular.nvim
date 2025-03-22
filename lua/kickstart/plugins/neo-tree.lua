@@ -24,7 +24,7 @@ return {
     },
     config = function()
         require('neo-tree').setup {
-            window = { width = 35 },
+            window = { width = 31 },
             filesystem = {
                 use_libuv_file_watcher = true,
             },
@@ -35,7 +35,7 @@ return {
                 sources = { -- table
                     {
                         source = 'filesystem', -- string
-                        display_name = ' 󰉓 Files ', -- string | nil
+                        display_name = ' 󰉓 Files', -- string | nil
                     },
                     {
                         source = 'buffers', -- string
@@ -43,7 +43,7 @@ return {
                     },
                     {
                         source = 'git_status', -- string
-                        display_name = '  󰊢 Git', -- string | nil
+                        display_name = ' 󰊢 Git', -- string | nil
                     },
                 },
             },
