@@ -28,6 +28,25 @@ return {
             filesystem = {
                 use_libuv_file_watcher = true,
             },
+
+            source_selector = {
+                statusline = true,
+                truncation_character = '…', -- string
+                sources = { -- table
+                    {
+                        source = 'filesystem', -- string
+                        display_name = ' 󰉓 Files ', -- string | nil
+                    },
+                    {
+                        source = 'buffers', -- string
+                        display_name = '󰈚 Buffers', -- string | nil
+                    },
+                    {
+                        source = 'git_status', -- string
+                        display_name = '  󰊢 Git', -- string | nil
+                    },
+                },
+            },
         }
     end,
 }
