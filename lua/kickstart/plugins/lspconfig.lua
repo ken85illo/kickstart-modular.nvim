@@ -229,7 +229,7 @@ return {
                 -- python
                 'isort',
                 'black',
-                'pyright',
+                'basedpyright',
                 'debugpy',
 
                 -- javascript
@@ -273,7 +273,7 @@ return {
             require('lspconfig').bashls.setup {}
             require('lspconfig').clangd.setup {}
             require('lspconfig').cmake.setup {}
-            require('lspconfig').pyright.setup {}
+            require('lspconfig').basedpyright.setup {}
         end,
     },
 }
