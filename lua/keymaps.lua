@@ -32,11 +32,10 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- Navigate between tmux panes
-vim.keymap.set('n', '<C-h>', '<cmd>TmuxNavigateLeft<CR>')
-vim.keymap.set('n', '<C-j>', '<cmd>TmuxNavigateDown<CR>')
-vim.keymap.set('n', '<C-k>', '<cmd>TmuxNavigateUp<CR>')
-vim.keymap.set('n', '<C-l>', '<cmd>TmuxNavigateRight<CR>')
-vim.keymap.set('n', '<C-\\>', '<cmd>TmuxNavigatePrevious<CR>')
+vim.keymap.set('n', '<C-h>', '<cmd>TmuxNavigateLeft<CR>', { silent = true })
+vim.keymap.set('n', '<C-j>', '<cmd>TmuxNavigateDown<CR>', { silent = true })
+vim.keymap.set('n', '<C-k>', '<cmd>TmuxNavigateUp<CR>', { silent = true })
+vim.keymap.set('n', '<C-l>', '<cmd>TmuxNavigateRight<CR>', { silent = true })
 
 -- Resize window using a shortcut
 vim.keymap.set('n', '<C-S-Down>', ':resize +2<CR>', { desc = 'Resize Horizontal Split Down' })
@@ -65,10 +64,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.keymap.set('n', '<C-n>', '<cmd>Neotree toggle<CR>')
 
 -- Toggle terminal using ToggleTerm
-vim.keymap.set('n', '<leader>tt', "<cmd>ToggleTerm direction='horizontal' size=10<CR>", { desc = 'Toggle terminal (horizontal)' })
-vim.keymap.set('n', '<leader>ty', "<cmd>ToggleTerm direction='vertical' size=60<CR>", { desc = 'Toggle terminal (vertical)' })
-vim.keymap.set('n', '<leader>tu', "<cmd>ToggleTerm direction='tab' <CR>", { desc = 'Toggle terminal (tab)' })
-vim.keymap.set('n', '<leader>ti', "<cmd>ToggleTerm direction='float' <CR>", { desc = 'Toggle terminal (float)' })
+-- vim.keymap.set('n', '<leader>tt', "<cmd>ToggleTerm direction='horizontal' size=10<CR>", { desc = 'Toggle terminal (horizontal)' })
+-- vim.keymap.set('n', '<leader>ty', "<cmd>ToggleTerm direction='vertical' size=60<CR>", { desc = 'Toggle terminal (vertical)' })
+-- vim.keymap.set('n', '<leader>tu', "<cmd>ToggleTerm direction='tab' <CR>", { desc = 'Toggle terminal (tab)' })
+-- vim.keymap.set('n', '<leader>ti', "<cmd>ToggleTerm direction='float' <CR>", { desc = 'Toggle terminal (float)' })
 
 -- Copy current path
 vim.keymap.set('n', '<leader>y', "<cmd>let @+=expand('%:p')<CR>", { desc = 'Copy current path' })

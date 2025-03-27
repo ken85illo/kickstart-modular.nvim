@@ -26,6 +26,7 @@ return {
                 -- mode = 'tabs',
                 diagnostics = 'nvim_lsp',
                 tab_size = 0,
+                close_command = 'bd! %d|bp',
                 hover = {
                     enabled = true,
                     delay = 200,
