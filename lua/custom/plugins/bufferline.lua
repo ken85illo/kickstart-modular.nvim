@@ -8,7 +8,9 @@ return {
         vim.api.nvim_set_keymap('n', '<leader>tc', ':tabclose<CR>', { noremap = true, desc = 'Close Current Tab' })
         vim.api.nvim_set_keymap('n', '<leader>tn', ':tabn<CR>', { noremap = true, desc = 'Next Tab' })
         vim.api.nvim_set_keymap('n', '<leader>tp', ':tabp<CR>', { noremap = true, desc = 'Previous Tab' })
-        vim.api.nvim_set_keymap('n', '<leader>db', ':bd|bp<CR>', { noremap = true, desc = 'Delete Buffer' })
+
+        -- Remove a buffer
+        vim.api.nvim_set_keymap('n', '<leader>db', ':bd!|bp<CR>', { noremap = true, desc = 'Delete Buffer' })
 
         vim.api.nvim_set_keymap('n', '<leader>tm', '', { desc = 'Move tab' })
         -- move current tab to previous position
@@ -35,7 +37,7 @@ return {
                 offsets = {
                     {
                         filetype = 'neo-tree',
-                        text = 'File Explorer',
+                        text = 'Neo-tree',
                         highlight = 'Directory',
                         separator = true, -- use a "true" to enable the default, or set your own character
                     },
