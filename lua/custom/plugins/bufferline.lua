@@ -45,28 +45,10 @@ return {
                 },
             },
             highlights = {
-                tab = {
-                    bg = 'NONE',
-                },
                 tab_selected = {
                     fg = '#0096ff',
                 },
-                tab_separator = {
-                    bg = 'NONE',
-                },
-                tab_separator_selected = {
-                    bg = 'NONE',
-                },
-                separator_selected = {
-                    bg = 'NONE',
-                },
-                separator_visible = {
-                    bg = 'NONE',
-                },
                 separator = {
-                    bg = 'NONE',
-                },
-                background = {
                     bg = 'NONE',
                 },
             },
