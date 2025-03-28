@@ -82,4 +82,6 @@ vim.opt.termguicolors = true
 -- Change cursor to block
 -- vim.opt.guicursor = 'n-v-i-c:block-Cursor'
 
+
 -- vim: ts=4 sts=4 sw=4 et
+

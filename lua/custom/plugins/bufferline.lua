@@ -45,29 +45,29 @@ return {
                 },
             },
             highlights = {
+                tab = {
+                    bg = 'NONE',
+                },
                 tab_selected = {
                     fg = '#0096ff',
                 },
                 tab_separator = {
-                    fg = '#000000',
-                    bg = '#000000',
+                    bg = 'NONE',
                 },
                 tab_separator_selected = {
-                    fg = '#000000',
-                    bg = '#000000',
-                    sp = '#000000',
+                    bg = 'NONE',
                 },
                 separator_selected = {
-                    fg = '#000000',
-                    bg = '#000000',
+                    bg = 'NONE',
                 },
                 separator_visible = {
-                    fg = '#000000',
-                    bg = '#000000',
+                    bg = 'NONE',
                 },
                 separator = {
-                    fg = '#000000',
-                    bg = '#000000',
+                    bg = 'NONE',
+                },
+                background = {
+                    bg = 'NONE',
                 },
             },
         }

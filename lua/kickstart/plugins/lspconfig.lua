@@ -272,7 +272,11 @@ return {
             require('lspconfig').bashls.setup {}
             require('lspconfig').clangd.setup {}
             require('lspconfig').cmake.setup {}
-            require('lspconfig').basedpyright.setup {}
+            require('lspconfig').basedpyright.setup {
+                root_dir = function()
+                    return vim.fn.getcwd()
+                end,
+            }
         end,
     },
 }
